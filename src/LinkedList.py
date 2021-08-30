@@ -21,6 +21,30 @@ class LinkedList:
             current = next
         self.head = previous
 
+        """
+        1->2->3->None
+        current = 1->2->3->none
+        next = 2->3->none
+        current.next = none
+        previous = 1->none
+        currrent = 2->3->none
+
+
+        1->none 2->3->none
+        current = 2->3->none
+        next  = 3->none
+        current.next = previous = 1->none
+        previous = 2->1->none
+        current = 3->none
+
+        2->1->none 3->None
+        current = 3->none
+        next = none
+        current.next = previous = 2->1->none
+        previous = 3->2->1->none
+        current = none
+        """
+
     def printList(self):
         current = self.head
         while current:
